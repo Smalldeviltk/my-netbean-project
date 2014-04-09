@@ -13,31 +13,11 @@ import java.util.Scanner;
  */
 public class Phan_4 {
 
-    public static char input() {
-        System.out.print("Nhap ki tu = ");
+    public static String input() {
+        System.out.print("Nhap n = ");
         Scanner scan = new Scanner(System.in);
-        String line = scan.nextLine();
-        char c = line.charAt(0);
-        return c;
+        String n = scan.nextLine();
+        return n;
     }
-
-    public static void check(char c) {
-        switch (c) {
-            case 'a':
-            case 'e':
-            case 'o':
-            case 'u':
-            case 'i':
-                System.out.println(c + " la nguyen am.");
-                break;
-            default:
-                System.out.print(c + " la phu am.");
-                break;
-        }
-    }
-
-    public static void main(String[] arg) {
-        char c=input();
-        check(c);
-    }
+    
 }

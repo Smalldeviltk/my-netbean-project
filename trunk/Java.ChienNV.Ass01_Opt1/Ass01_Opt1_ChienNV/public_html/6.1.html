@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>BOOK MAINTENANCE</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="shortcut icon" href="library-icon.png">
+    </head>
+    <body>
+        <div style = "border: 2px solid black;width: 50%">
+            <div style="background-color: darkblue; border: 1px solid black; font-weight: bold; font-family: Courier New;">
+                <p style="color: white">BOOK MAINTENANCE</p>
+            </div>
+            <form name="regForm">
+                <table class="table_one" style="margin-top: 10px;" valign="top">
+                    <tbody>
+                        <tr>
+                            <td class="font_text_left">Book ID:</td>
+                            <td class="font_text_right">
+                                <input type="text" width="200" id="bookID">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="font_text_left">Book Title:</td>
+                            <td class="font_text_right">
+                                <input type="text" width="200" id="bookTitle">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="font_text_left">Author:</td>
+                            <td class="font_text_right">
+                                <input type="text" width="200" id="author">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="font_text_left">Category:</td>
+                            <td class="font_text_right">
+                                <div style = "border:1px solid black; width: 70%">
+                                    <input type="checkbox" name="hobby1" value="Horror">Horror
+                                    <input type="checkbox" name="hobby2" value="Romance">Romance
+                                    <br/>
+                                    <input type="checkbox" name="hobby3" value="Thriller">Thriller
+                                    <input type="checkbox" name="hobby4" value="Sci-fi">Sci-fi
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="font_text_left">Publisher:</td>
+                            <td class="font_text_right">
+                                <select>
+                                    <option>Kim Đồng</option>
+                                    <option>Văn Học</option>
+                                    <option>Giáo Dục</option>
+                                    <option>Other</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="30%" align="center" colspan="2">
+                                <input type="button" value="OK">
+                                <input type="button" value="CANCEL">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>            
+        </div>
+    </body>
+</html>
