@@ -1,0 +1,65 @@
+body{
+   margin:0px;
+   background-color:lavender; 
+    }
+
+.table_one {
+   border:1px solid #cccccc; 
+}
+
+.title{
+    font-family: Arial;
+    color: green;
+}
+
+.font_text{
+   font-family: Arial;
+   font-size: 12px;
+   text-align: left;
+  
+}
+.font_text_left{
+   font-family: Arial;
+   font-size: 12px;
+   text-align: right;
+   width: 30%;
+}
+
+.font_text_right{
+  font-family: Arial;
+   font-size: 12px;
+   text-align: left;
+   width: 70%;
+}
+
+
+.td_css{
+ background-color: #cccccc;
+ font-weight: bold;
+ }
+
+table.gridtable {
+	font-family: arial,sans-serif;
+	font-size:12px;
+	color:#333333;
+	border-width: 1px;
+	border-color: #666666;
+	border-collapse: collapse;
+	margin-top:10px;
+}
+
+table.gridtable tr {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #666666;
+	
+}
+
+table.gridtable td {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #666666;
+	
+}
