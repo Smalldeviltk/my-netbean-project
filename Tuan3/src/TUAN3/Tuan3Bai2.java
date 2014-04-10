@@ -19,7 +19,7 @@ public class Tuan3Bai2 {
         //Thiet lap mau cho cua so
         fra.getContentPane().setBackground(Color.BLUE);
         // Thiet lap tieu de cho cua so
-        fra.setTitle("Nguyen Van Sinh - 10520130");
+        fra.setTitle("Nguyen Van Chien - 10520112");
         //Thay doi icon
     }  
 }

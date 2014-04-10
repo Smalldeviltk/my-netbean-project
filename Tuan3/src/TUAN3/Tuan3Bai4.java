@@ -21,9 +21,9 @@ public class Tuan3Bai4 {
 
 class MyTime extends JFrame {
 
-    JFrame jframe = new JFrame("Nguyen Van Sinh - 10520130");
+    JFrame jframe = new JFrame("Nguyen Van Chien - 10520112");
 
-    JLabel jlabelTime = new JLabel("Nguyen Van Sinh");
+    JLabel jlabelTime = new JLabel("Nguyen Van Chien");
 
     Date now = new Date();
 

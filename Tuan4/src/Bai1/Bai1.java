@@ -7,6 +7,8 @@ package Bai1;
 
 import java.util.Calendar;
 import java.util.Date;
+import java.awt.event.*;
+import javax.swing.*;
 
 /**
  *
@@ -31,16 +33,15 @@ public class Bai1 extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        lbTime = new javax.swing.JLabel();
+        lbReader = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setText("Thời gian hiện tại:");
 
-        jLabel2.setText("jLabel2");
-
-        jLabel3.setText("jLabel3");
+        lbTime.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        lbTime.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -49,10 +50,10 @@ public class Bai1 extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel3)
-                .addGap(0, 226, Short.MAX_VALUE))
+                .addComponent(lbTime, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lbReader)
+                .addGap(0, 397, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -60,12 +61,12 @@ public class Bai1 extends javax.swing.JFrame {
                 .addGap(78, 78, 78)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3))
+                    .addComponent(lbTime)
+                    .addComponent(lbReader))
                 .addContainerGap(96, Short.MAX_VALUE))
         );
 
-        jLabel3.getAccessibleContext().setAccessibleName("jLabel3");
+        lbReader.getAccessibleContext().setAccessibleName("lbReader");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -74,11 +75,6 @@ public class Bai1 extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -96,8 +92,12 @@ public class Bai1 extends javax.swing.JFrame {
             @Override
             public void run() {
                 new Bai1().setVisible(true);
+                getTime();
+                Timer t = new Timer(1000, new XulyTimer());
+                t.start();
             }
         });
+
     }
 
     public static void getTime() {
@@ -105,14 +105,36 @@ public class Bai1 extends javax.swing.JFrame {
         int h = now.get(Calendar.HOUR_OF_DAY);
         int m = now.get(Calendar.MINUTE);
         int s = now.get(Calendar.SECOND);
+
+        lbTime.setText(h + " : " + m + " : " + s);
+        lbReader.setText(readNumbers(h) + " giờ, " + readNumbers(m) + " phút, " + readNumbers(s) + " giây.");
     }
 
     public static String readNumbers(int n) {
         String result = null;
         if (n < 10) {
             result = readNumber(n);
+        } else if (n >= 20) {
+            if (n % 10 == 0) {
+                result = readNumber(n / 10) + " mươi";
+            } else {
+                result = readNumber(n / 10) + " mươi " + readNumber(n % 10);
+            }
+            if (n % 10 == 1) {
+                result = readNumber(n / 10) + " mươi mốt";
+            }
+            if (n % 10 == 5) {
+                result = readNumber(n / 10) + " mươi lăm";
+            }
         } else {
-            result = readNumber(n / 10) + " " + readNumber(n % 10);
+            if (n == 10) {
+                result = "mười";
+            } else {
+                result = "mười " + readNumber(n % 10);
+            }
+            if (n == 15) {
+                result = "mười lăm";
+            }
         }
         return result;
     }
@@ -146,8 +168,30 @@ public class Bai1 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    public static javax.swing.JLabel lbReader;
+    public static javax.swing.JLabel lbTime;
     // End of variables declaration//GEN-END:variables
+
+    public static class XulyTimer implements ActionListener {
+
+        JFrame cmp;
+
+        public XulyTimer() {
+        }
+
+        public XulyTimer(JFrame f) {
+            cmp = f;
+        }
+
+        @Override
+        public void actionPerformed(ActionEvent evt) {
+//            if (evt.getSource() instanceof Timer) {
+//                // Các hàm xuất và đọc các giá trị thời gian ...
+//                getTime();
+//            }
+            getTime();
+        }
+
+    }
 
 }
