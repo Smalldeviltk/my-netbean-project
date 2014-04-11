@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Bai1;
+package TUAN3;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -14,12 +14,12 @@ import javax.swing.*;
  *
  * @author Small
  */
-public class Bai1 extends javax.swing.JFrame {
+public class Bai1_old extends javax.swing.JFrame {
 
     /**
      * Creates new form Bai1
      */
-    public Bai1() {
+    public Bai1_old() {
         initComponents();
     }
 
@@ -83,7 +83,7 @@ public class Bai1 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Bai1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Bai1_old.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
@@ -91,7 +91,7 @@ public class Bai1 extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new Bai1().setVisible(true);
+                new Bai1_old().setVisible(true);
                 getTime();
                 Timer t = new Timer(1000, new XulyTimer());
                 t.start();

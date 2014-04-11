@@ -32,3 +32,35 @@ and open the template in the editor.
     background: #FFFFCC;
 }
 
+fieldset.hiden{
+	border:hidden;
+}
+tag-head{
+	font-size:26px;
+	font-weight:bold;
+	font-family:"Times New Roman", Times, serif;
+}
+.cls-head-register{
+	font-size: 16px;
+	font-weight: bold;
+	height:15%;
+	width:80%;
+	background:#999;
+}
+.cls-input{
+	margin-left:2%;
+	width:40%;
+}
+.cls-label{
+	text-align:left;
+	float:left;
+	width:15%;
+}
+.cls-label-right{
+	float:right;
+	margin-right:20%;
+}
+.cls-margin-left{
+	margin-left:1%;
+}
+
