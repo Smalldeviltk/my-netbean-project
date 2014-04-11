@@ -10,10 +10,81 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
         <link href="css//stype.css" rel="stylesheet" type="text/css">
-        <script src="js//script.js"></script>
+        <script language="javascript" src="js//script.js"></script>
     </head>
-    <body>
-        <h1 class="headcontent" style="color: green">RECENTLY TIMER</h1>
-        <div id="time" class="itemcontent" style="font-size: 30px; color: green" align="center"></div>
+    <body onload="processImage()">
+        <h1 class="headcontent" style="color: lightcoral">RECENTLY TIMER</h1>
+        <div align="center" id="txt">
+            <img id="hour1" src="" alt="hour">
+            <img id="hour2" src="" >
+            <img src="NumberImg/haicham.png">
+            <img id="min1" src="" >
+            <img id="min2" src="" >
+            <img src="NumberImg/haicham.png">
+            <img id="second1" src="" >
+            <img id="second2" src="" >
+            <img id="ampm" src="" >
+        </div>
     </body>
+    <script type="text/javascript">
+        function Image(h) {
+            switch (h) {
+                case 1:
+                    return "NumberImg//1.png";
+                case 2:
+                    return "NumberImg//2.png";
+                case 3:
+                    return "NumberImg//3.png";
+                case 4:
+                    return "NumberImg//4.png";
+                case 5:
+                    return "NumberImg//5.png";
+                case 6:
+                    return "NumberImg//6.png";
+                case 7:
+                    return "NumberImg//7.png";
+                case 8:
+                    return "NumberImg//8.png";
+                case 9:
+                    return "NumberImg//9.png";
+                case 0:
+                    return "NumberImg//0.png";
+                case 11:
+                    return "NumberImg//a.png";
+                case 12:
+                    return "NumberImg//p.png";
+            }
+        }
+
+        function processImage() {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+
+            var ampm = h >= 12 ? 12 : 11;
+            h = h % 12;
+            h = h ? h : 12; // the processImage '0' should be '12'
+
+            if (h > 9) {
+                document.getElementById("hour1").src = Image(1);
+                document.getElementById("hour2").src = Image(h % 10);
+            } else {
+                document.getElementById("hour1").src = Image(0);
+                document.getElementById("hour2").src = Image(h);
+            }
+
+
+            document.getElementById("min1").src = Image(parseInt(m / 10));
+            document.getElementById("min2").src = Image(m % 10);
+
+            document.getElementById("second1").src = Image(parseInt(s / 10));
+            document.getElementById("second2").src = Image(s % 10);
+
+            document.getElementById("ampm").src = Image(ampm);
+            t = setTimeout(function() {
+                processImage()
+            }, 500);
+        }
+    </script>
 </html>

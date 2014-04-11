@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Register</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link href="css//styleRegisterForm.css" rel="stylesheet" type="text/css">
+        
+        <script src="jsRegister.js" language="javascript"></script>
+    </head>
+    <body>
+        <form name="registration_form" id="registration_form" method="get">
+            <div class="headcontentRegister">Create an account</div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Email Address:</td>
+                        <td>
+                            <input class="backgroundtextbox" type="email" name="email" id="email" autofocus required>
+                        </td>
+                        <td>*</td>
+                    </tr>
+
+                    <tr>
+                        <td>Password:</td>
+                        <td>
+                            <input type="password" name="password" id="password" required>
+                        </td>
+                        <td>*</td>
+                    </tr>
+
+                    <tr>
+                        <td>Comfirm password:</td>
+                        <td>
+                            <input type="password" name="confirmpassword" id="confirmpassword" required>
+                        </td>
+                        <td>*</td>
+                    </tr>
+
+                    <tr>
+                        <td>Full name:</td>
+                        <td>
+                            <input class="backgroundtextbox" type="text" name="fullname" id="fullname" required>
+                        </td>
+                        <td>*</td>
+                    </tr>
+
+                    <tr>
+                        <td>Address:</td>
+                        <td>
+                            <textarea rows="3"></textarea>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Country:</td>
+                        <td>
+                            <select name="country" id="country">
+                                <option>--Select country--</option>
+                                <option>Vietnam</option>
+                                <option>United States</option>
+                                <option>United Kingdom</option>
+                                <option>Australia</option>
+                                <option>Singapore</option>
+                            </select>
+                        </td>
+                        <td>*</td>                        
+                    </tr>
+
+                    <tr>
+                        <td>Phone No.:</td>
+                        <td>
+                            <input class="backgroundtextbox" type="tel" placeholder="999-999-9999" 
+                            pattern="\d{3}[\-]\d{3}[\-]\d{4}" title="Must be 999-999-9999 format">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Sex:</td>
+                        <td>
+                            <input type="radio" name="sex" value="male" checked>Male
+                            <input type="radio" name="sex" value="female">Female
+                        </td>
+                    </tr>
+			
+                    <tr>
+                        <td>Age:</td>
+                        <td>
+                            <select name="age" id="age">
+                                <option>--Select age--</option>
+                                <option>< 6</option>
+                                <option>6 - 18</option>
+                                <option>18 - 22</option>
+                                <option>23 - 30</option>
+                                <option>30 - 40</option>
+                                <option>> 40</option>
+                            </select>
+                        </td>
+                        <td>*</td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="submit" name="submit" id="submit" value="Register" onClick="validation();">
+                            <input type="reset" name="reset" id="reset" value="Clear">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </body>
+</html>

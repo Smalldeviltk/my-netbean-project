@@ -1,0 +1,21 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 8, 2014, 1:52:45 PM
+    Author     : Small
+*/
+
+.headcontentRegister{
+    border: 1px;
+    font-weight: bold;
+    font-size: 22px;
+    background: grey;	
+}
+
+.backgroundtextbox{
+    background: #FFFFCC;
+}
+

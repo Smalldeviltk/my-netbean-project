@@ -20,21 +20,21 @@ and open the template in the editor.
                     <tr>
                         <td width="10px">Email:</td>
                         <td>
-                            <input type="email">
+                            <input type="email" name="txtEmail" id="txtEmail" placeholder="abc@xyz" tabindex="1">
                         </td>
                     </tr>
 
                     <tr>
                         <td>Password:</td>
                         <td>
-                            <input type="password">
+                            <input type="password" name="txtPassword" id="txtPassword" tabindex="2">
                         </td>
                     </tr>
 
                     <tr>
                         <td></td>
                         <td>
-                            <input type="submit" value="Login">
+                            <input type="submit" name="btLogin" value="Login" class="cls-margin-left" onclick="checkLogin()" tabindex="3">
                         </td>
                     </tr>
                 </tbody>
@@ -42,4 +42,19 @@ and open the template in the editor.
             <div>Not Registered? Click <a href="register.html">here</a></div>
         </form>
     </body>
+    <script>
+        function checkLogin() {
+            if (document.getElementById("txtEmail").value == "")
+                alert("Please, input email");
+            else
+            if (document.getElementById("txtPassword").value == "")
+                alert("Please, input password");
+            else
+            if (document.getElementById("txtEmail").value == "hnaptech@aptech.com"
+                    && document.getElementById("txtPassword").value == "123")
+                alert("Hi! Welcome to Website Ha Noi - Aptech Education Center");
+            else
+                alert("Sorry! Login failed. Check login or registered");
+        }
+    </script>
 </html>
