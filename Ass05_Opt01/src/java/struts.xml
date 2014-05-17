@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+    
+<struts>
+	<constant name="struts.enable.DynamicMethodInvocation" value="false"></constant>
+	<constant name="struts.devMode" value="false"></constant>
+	<package name="default" extends="struts-default">
+	<action name="register">
+		<result>/Home.jsp</result>
+	</action>
+	<action name="dangky" class="com.qlydb.action.TeamAction" method="count">
+		<result name="success">/TeamManagements.jsp</result>
+	</action>
+	<action name="save" class="com.qlydb.action.TeamAction" method="saveOrUpdate">
+		<result name="success">/ListTeams.jsp</result>
+	</action>
+	<action name="hienthi" class="com.qlydb.action.ResultAction" method="getList">
+		<result name="success">/Schedules.jsp</result>
+	</action>
+	<action name="danhsach" class="com.qlydb.action.TeamAction" method="list">
+		<result name="success">/ListTeams.jsp</result>
+	</action>
+	<action name="ketqua" class="com.qlydb.action.TeamAction" method="ketqua">
+		<result name="success">/Rankings.jsp</result>
+	</action>
+	<action name="editResult" class="com.qlydb.action.ResultAction" method="edit">
+		<result name="success">/EditScore.jsp</result>
+	</action>
+	<action name="updateScore" class="com.qlydb.action.ResultAction" method="update">
+		<result name="success">/Schedules.jsp</result>
+	</action>
+	</package>
+
+</struts>
