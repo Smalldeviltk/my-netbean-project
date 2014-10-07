@@ -1,7 +1,6 @@
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.Calendar;
 import sun.util.BuddhistCalendar;
 
@@ -25,8 +24,9 @@ public class Program {
 
             ICake cake = bakery.MakeCake(currentMonth); //Make a cake depend on current month
 
-            System.out.println(cake.GetCakeName() + " created at " + dateFormat.format(cal.getTime()));//Show name of cake
-
+            System.out.println(cake.GetCakeName()
+                    + " created at "
+                    + dateFormat.format(cal.getTime()));//Show name of cake
             Thread.sleep(1000); //wait 1 second
         }
     }

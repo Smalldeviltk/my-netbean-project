@@ -13,5 +13,4 @@ class Cake implements ICake {
     public String GetCakeName() {
         return "Default Cake";
     }
-
 }
