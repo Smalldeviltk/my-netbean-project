@@ -13,5 +13,4 @@ class MoonCake implements ICake {
     public String GetCakeName() {
         return "Moon Cake";
     }
-
 }

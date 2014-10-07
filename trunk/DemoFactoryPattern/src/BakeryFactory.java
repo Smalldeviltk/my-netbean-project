@@ -12,7 +12,6 @@ public class BakeryFactory {
 
     public ICake MakeCake(int month) {
         ICake cakeResult = null;
-
         switch (month) {
             case 0:
             case 11:
@@ -26,8 +25,6 @@ public class BakeryFactory {
                 cakeResult = new Cake();
                 break;
         }
-
         return cakeResult;
     }
-
 }

@@ -13,5 +13,4 @@ class SteamedCake implements ICake {
     public String GetCakeName() {
         return "Steamed Cake";
     }
-
 }
